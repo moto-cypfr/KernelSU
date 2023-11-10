@@ -56,7 +56,7 @@ static int ksu_can_umount(const struct path *path, int flags){
 		return -EPERM;
 	return 0;
 }
-int ksu_path_umount(struct path *path, int flags){
+static int ksu_path_umount(struct path *path, int flags){
 	struct mount *mnt = real_mount(path->mnt);
 	int ret;
 
